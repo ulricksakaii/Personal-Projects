@@ -1,0 +1,6 @@
+    PASSOS
+ -> Criar o layout da aplicação;
+
+ -> Receber e formatar uma planilha;
+
+ -> Criar o sistema para o envio das mensagens;

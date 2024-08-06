@@ -1,0 +1,13 @@
+        PASSOS
+
+    -> Perguntar se deseja calcular o valor com base em uma porcentagem ou valor obtido
+    
+    -> Pedir a porcentagem, ou o valor obtido
+
+    -> Pedir o valor total
+
+    -> Utilizar a classe desejada para calcular
+     
+    -> Finalizar o código
+    
+ 

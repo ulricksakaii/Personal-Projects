@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial0scale=1.0">
+        <title> Calculator</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .background{
+                background-image: radial-gradient(purple, black);
+                height: 100vh;
+                font-family: Georgia;
+                text-align: center;
+                color: white;
+            }
+            .calculadora{
+                position: absolute;
+                background-color:  rgba(0, 0, 0);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 15px;
+                padding: 10px;
+
+            }
+            .button{
+                font-family: Arial;
+                width: 50px;
+                height: 50px;
+                font-size: 30px;
+                cursor: pointer;
+                background-color: rgba(71, 66, 66, 0.425);
+                color: white;
+                margin: 2px;
+                border-radius: 5px;
+
+            }
+            .button:hover{
+                background-color: black;
+            }
+            #resultado{
+                background-color: rgba(255, 255, 255, 0.918);
+                width: 218px;
+                height: 40px;
+                margin: 3px;
+                font-size: 25px;
+                color: black;
+                text-align: right;
+                font-family: Arial;
+                padding: 5px;
+            }
+        </style>
+    <div class="background">
+    <head>
+        <h1>Sakai's Calculator</h1>
+    </head>
+    <body>
+        
+            <div class="calculadora">
+                <h2>Calculator</h2>
+                <p id="resultado"></p>
+                <table>
+                    <tr>
+                        <td><button class="button" onclick="rerun('')">C</button></td>
+                        <td><button class="button" onclick="backspace('')"><</button></td>
+                        <td><button class="button" onclick="insert('/')">/</button></td>
+                        <td><button class="button" onclick="insert('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="button" onclick="insert('7')">7</button></td>
+                        <td><button class="button" onclick="insert('8')">8</button></td>
+                        <td><button class="button" onclick="insert('9')">9</button></td>
+                        <td><button class="button" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="button" onclick="insert('4')">4</button></td>
+                        <td><button class="button" onclick="insert('5')">5</button></td>
+                        <td><button class="button" onclick="insert('6')">6</button></td>
+                        <td><button class="button" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="button" onclick="insert('1')">1</button></td>
+                        <td><button class="button" onclick="insert('2')">2</button></td>
+                        <td><button class="button" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="button" style="height: 105px" onclick="calc('')">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="button" style="width: 105px" onclick="insert('0')">0</button></td>
+                        <td><button class="button"onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            function insert(number){
+              var num = document.getElementById('resultado').innerHTML;
+              document.getElementById('resultado').innerHTML = num + number;
+            }
+            function rerun(){
+                document.getElementById('resultado').innerHTML = "";
+            }
+            function backspace(){
+                var resultado = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+
+            }
+            function calc(){
+
+                var resultado = document.getElementById('resultado').innerHTML;
+
+                if(resultado){
+
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                }
+                else{
+                    document.getElementById('resultado'). innerHTML = '';
+                }
+            }
+        </script>
+    </body>
+</html>
