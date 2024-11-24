@@ -14,7 +14,7 @@ sleep(20)
     nome= linha[0].value
     telefone = int(linha[1].value)"""
 texto = f'Olá, gostaria de mais informações!'
-link_mensagem = f'https://api.whatsapp.com/send?phone=5531984129069&text={quote(texto)}'
+link_mensagem = f'https://api.whatsapp.com/send?phone=&text={quote(texto)}'
 print(link_mensagem)
     
 #try:
